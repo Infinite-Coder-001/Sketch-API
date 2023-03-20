@@ -1,3 +1,7 @@
+// ********************
+// **** SKETCH API ****
+// ********************
+
 // This is the main file, that is loading in the <head> of your HTML page
 // Link to this file is 'https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@[VERSION]/main.js'
 
@@ -35,7 +39,7 @@ function SketchAPIMain(programID, callback) {
             minutes = "0" + minutes;
         }
 
-        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/log-main-" + year + month + day + hours + minutes + ".js";
+        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/" + String(programID) + "/log-main-" + year + month + day + hours + minutes + ".js";
         script.onload = function() {
             finished();
         };
