@@ -240,7 +240,7 @@ function run() {
         fs.mkdirSync("logs/temp-main");
       }
 
-      var w = fs.createWriteStream("logs/temp-main/" + String(id) + "-" + getDateTime(false) + ".txt");
+      var w = fs.createWriteStream("logs/temp-main/log-" + String(id) + "-" + getDateTime(false) + ".txt");
       w.write("function loadSketchAPIMain() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
@@ -281,7 +281,7 @@ function run() {
         fs.mkdirSync("logs/temp-forks");
       }
 
-      var w = fs.createWriteStream("logs/temp-forks/" + String(id) + "-" + getDateTime(false) + ".txt");
+      var w = fs.createWriteStream("logs/temp-forks/log-" + String(id) + "-" + getDateTime(false) + ".txt");
       w.write("function loadSketchAPIForks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
@@ -328,7 +328,7 @@ function run() {
         fs.mkdirSync("logs/temp-feedbacks");
       }
 
-      var w = fs.createWriteStream("logs/temp-feedbacks/" + String(id) + "-" + getDateTime(false) + ".txt");
+      var w = fs.createWriteStream("logs/temp-feedbacks/log-" + String(id) + "-" + getDateTime(false) + ".txt");
       w.write("function loadSketchAPIFeedbacks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
@@ -392,7 +392,7 @@ function run() {
         fs.mkdirSync("logs/temp-questions");
       }
 
-      var w = fs.createWriteStream("logs/temp-questions/" + String(id) + "-" + getDateTime(false) + ".txt");
+      var w = fs.createWriteStream("logs/temp-questions/log-" + String(id) + "-" + getDateTime(false) + ".txt");
       w.write("function loadSketchAPIQuestions() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     } catch (er) { }
