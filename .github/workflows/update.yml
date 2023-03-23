@@ -5,6 +5,11 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
+      workflowRerun:
+        description: 'ًRe-running workflow'
+        required: true
+        default: 'Update data'
+        
       logLevel:
         description: 'Log level'
         required: true
