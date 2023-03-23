@@ -39,7 +39,7 @@ function SketchAPIMain(programID, callback) {
             minutes = "0" + minutes;
         }
 
-        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@Version-100/logs/main/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
+        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/main/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
         script.onload = function() {
             finished();
         };
@@ -88,7 +88,7 @@ function SketchAPIForks(programID, callback) {
             minutes = "0" + minutes;
         }
 
-        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@Version-100/logs/forks/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
+        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/forks/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
         script.onload = function() {
             finished();
         };
@@ -137,7 +137,7 @@ function SketchAPIFeedbacks(programID, callback) {
             minutes = "0" + minutes;
         }
 
-        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@Version-100/logs/feedbacks/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
+        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/feedbacks/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
         script.onload = function() {
             finished();
         };
@@ -186,7 +186,7 @@ function SketchAPIQuestions(programID, callback) {
             minutes = "0" + minutes;
         }
 
-        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@Version-100/logs/questions/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
+        script.src = "https://cdn.jsdelivr.net/gh/Infinite-Coder-001/Sketch-API@main/logs/questions/log-" + String(programID) + "-" + year + month + day + hours + minutes + ".js";
         script.onload = function() {
             finished();
         };
