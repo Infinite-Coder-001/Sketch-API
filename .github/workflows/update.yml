@@ -4,12 +4,7 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
-    inputs:
-      workflowRerun:
-        description: 'ًRe-running workflow'
-        required: true
-        default: 'Update data'
-        
+    inputs:        
       logLevel:
         description: 'Log level'
         required: true
