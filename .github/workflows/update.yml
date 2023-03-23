@@ -18,10 +18,6 @@ on:
         description: 'Test scenario tags'
         required: false
         type: boolean
-  workflow_run:
-    workflows: [Update data]
-    types:
-      - completed
     
 jobs:
   update:
