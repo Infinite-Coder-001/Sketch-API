@@ -35,7 +35,7 @@ jobs:
           node-version: '16'
           
       - name: Install Node.js libraries
-        run: node --experimental-fetch your_code.js
+        run: node --experimental-fetch update.js
           
       - name: Run Node.js
         run: node "update.js"
