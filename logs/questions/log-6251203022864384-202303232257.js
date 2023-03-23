@@ -1,0 +1,3 @@
+function LoadSketchAPIQuestions() {
+    return [{"content":"Where's the sub thread?\n\nAlso, first vote! :D","author":{"nickname":"Aragorn Elessar (Inactive)","link":"https://www.khanacademy.org/profile/kaid_714276242204949021450419","avatar":"https://www.khanacademy.org/images/avatars/svg/leaf-blue.svg"},"posted":"2022-10-08T21:13:26.769156Z","expandKey":"ag5zfmtoYW4tYWNhZGVteXJACxIIVXNlckRhdGEiHWthaWRfNzE0Mjc2MjQyMjA0OTQ5MDIxNDUwNDE5DAsSCEZlZWRiYWNrGICA49yJmrwIDA","flags":{"flags":null,"flaggedBy":null},"voteCount":1}];
+}
