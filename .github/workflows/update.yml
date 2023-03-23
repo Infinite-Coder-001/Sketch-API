@@ -4,20 +4,20 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
-    inputs:        
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-        - info
-        - warning
-        - debug
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
+#    inputs:        
+#      logLevel:
+#        description: 'Log level'
+#        required: true
+#        default: 'warning'
+#        type: choice
+#        options:
+#        - info
+#        - warning
+#        - debug
+#      tags:
+#        description: 'Test scenario tags'
+#        required: false
+#        type: boolean
     
 jobs:
   update:
