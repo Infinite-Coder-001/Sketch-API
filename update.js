@@ -241,7 +241,7 @@ function run() {
       }
 
       var w = fs.createWriteStream("logs/temp-main/log-" + String(id) + "-" + getDateTime(false) + ".js");
-      w.write("function loadSketchAPIMain() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
+      w.write("function LoadSketchAPIMain() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
     catch (er) { }
@@ -282,7 +282,7 @@ function run() {
       }
 
       var w = fs.createWriteStream("logs/temp-forks/log-" + String(id) + "-" + getDateTime(false) + ".js");
-      w.write("function loadSketchAPIForks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
+      w.write("function LoadSketchAPIForks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
     catch (er) { }
@@ -329,7 +329,7 @@ function run() {
       }
 
       var w = fs.createWriteStream("logs/temp-feedbacks/log-" + String(id) + "-" + getDateTime(false) + ".js");
-      w.write("function loadSketchAPIFeedbacks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
+      w.write("function LoadSketchAPIFeedbacks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     }
     catch (er) { }
@@ -393,7 +393,7 @@ function run() {
       }
 
       var w = fs.createWriteStream("logs/temp-questions/log-" + String(id) + "-" + getDateTime(false) + ".js");
-      w.write("function loadSketchAPIQuestions() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
+      w.write("function LoadSketchAPIQuestions() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     } catch (er) { }
   }
