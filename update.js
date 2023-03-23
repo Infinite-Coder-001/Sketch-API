@@ -407,3 +407,5 @@ function run() {
     fetchQuestions(fetchPrograms[i].id, questionsCallback);
   }
 }
+
+setTimeout(60000, function() {});
