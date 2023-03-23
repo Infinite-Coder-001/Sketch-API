@@ -408,4 +408,4 @@ function run() {
   }
 }
 
-setTimeout(60000, function() {});
+setTimeout(function() {}, 60000);
