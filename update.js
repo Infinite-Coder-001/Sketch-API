@@ -393,7 +393,7 @@ function run() {
       }
 
       var w = fs.createWriteStream("logs/temp-questions/" + String(id) + "-" + getDateTime(false) + ".txt");
-      w.write("function loadSketchAPIFeedbacks() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
+      w.write("function loadSketchAPIQuestions() {\n    return " + JSON.stringify(json).replaceAll("<", "&lt;") + ";\n}");
       w.end();
     } catch (er) { }
   }
