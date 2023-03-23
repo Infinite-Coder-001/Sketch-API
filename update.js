@@ -1,5 +1,5 @@
-// Evaluated by Github Acitons. 
-// This script updates the data. 
+// Evaluated by Github Acitons
+// This script updates the data
 
 // Importing libraries
 const fs = require('fs');
