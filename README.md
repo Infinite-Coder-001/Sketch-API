@@ -7,7 +7,7 @@ This repository downloads data from **sketches** on **Khan Academy** (votes, for
 |1            |First version, can load main, forks, feedbacks (without comments) and questions of a program.            |YES              |
 
 ## Setup
-To setup this API for your project, go here: **COMMING SOON** <br>
+To setup this API for your project, go here: **COMING SOON** <br>
 Find a thread, that says `>>> Here send your program IDs <<<`. Send there this comment: 
 ```
 {program:YOUR_PROGRAM_ID}
