@@ -54,21 +54,21 @@ This library contains these functions:
 To see full documentation, please go to wiki. 
 
 ## Questions
-If you have any questions, do this: 
+If you have any questions, please: 
  - Look into wiki
  - Look into discussions, if somebody didn't answer the question already
  - If you still can't find the answer, go to discussions and ask me
  
 ## Bugs
 If you found a vulnerelabity, please report it as soon as possible in Issues. 
-If something isn't working: 
- - Check, if you setup the API correctly (see setup)
- - Check, if you didn't forget to import the library
- - Check, if you don't have a mistake in your code
- - Check, if you don't have restricted access to Jsdelivr (schools often have that)
- - Look, if somebody didn't report the bug yet
- - Otherwise, please report the bug in Issues
+If something isn't working, check, if: 
+ - you setup the API correctly (see setup)
+ - you didn't forget to import the library
+ - you don't have a mistake in your code
+ - you don't have restricted access to Jsdelivr (schools often have that)
+ - somebody didn't report the bug yet
+Otherwise, please report the bug in Issues. 
  
 ## Credits
-Sprout - help with Github Action setup <br>
-Infinite coder - everything else
+**Sprout** - help with Github Action setup <br>
+**Infinite coder** - everything else
