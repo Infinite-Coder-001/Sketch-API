@@ -18,10 +18,10 @@ function getFetchPrograms() {
     .then((body) => {
       var data = JSON.parse(body).data.feedbackRepliesPaginated.feedback;
       for (var i = 0; i < data.length; i++) {
-        if (data[i].content.split(":")[1] !== undefined) {
-          if (data[i].content.split(":")[1].split("}")[0] !== undefined) {
-            if (parseInt(data[i].content.split(":")[1].split("}")[0]) !== null && parseInt(data[i].content.split(":")[1].split("}")[0]) !== 0 && parseInt(data[i].content.split(":")[1].split("}")[0]) !== undefined && parseInt(data[i].content.split(":")[1].split("}")[0]) !== NaN) {
-              fetchPrograms.push({ id: parseInt(data[i].content.split(":")[1].split("}")[0]) });
+        if (data[i].content.split("<")[1] !== undefined) {
+          if (data[i].content.split("<")[1].split("<")[0] !== undefined) {
+            if (parseInt(data[i].content.split("<")[1].split(">")[0]) !== null && parseInt(data[i].content.split("<")[1].split(">")[0]) !== 0 && parseInt(data[i].content.split("<")[1].split(">")[0]) !== undefined && parseInt(data[i].content.split("<")[1].split(">")[0]) !== NaN) {
+              fetchPrograms.push({ id: parseInt(data[i].content.split("<")[1].split(">")[0]) });
             }
           }
         }
