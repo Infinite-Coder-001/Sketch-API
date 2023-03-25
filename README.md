@@ -10,7 +10,7 @@ This repository downloads data from **sketches** on **Khan Academy** (votes, for
 To setup this API for your project, go here: **COMING SOON** <br>
 Find a thread, that says `>>> Here send your program IDs <<<`. Send there this comment: 
 ```
-{program:YOUR_PROGRAM_ID}
+<YOUR_PROGRAM_ID>
 ```
 *Note*: Replace `YOUR_PROGRAM_ID` with your program id :) <br><br><br>
 After doing that, the API will start logging data of your program. <br>
