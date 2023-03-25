@@ -210,7 +210,7 @@ function run() {
       }, 1000);
     }
     
-    if (data.translatedTitle === undefined) {
+    if (data === undefined) {
       return;
     }
 
@@ -268,7 +268,7 @@ function run() {
       }, 1000);
     }
     
-    if (data.programs === undefined) {
+    if (data === undefined) {
       return;
     }
 
@@ -314,7 +314,7 @@ function run() {
       }, 1000);
     }
     
-    if (data[0] === undefined) {
+    if (data === undefined) {
       return;
     }
 
@@ -364,7 +364,7 @@ function run() {
       }, 1000);
     }
     
-    if (data[0] === undefined) {
+    if (data === undefined) {
       return;
     }
 
