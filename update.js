@@ -209,6 +209,10 @@ function run() {
         fs.renameSync("logs/temp-main", "logs/main");
       }, 1000);
     }
+    
+    if (data.translatedTitle === undefined) {
+      return;
+    }
 
     try {
       var json = {
@@ -263,6 +267,10 @@ function run() {
         fs.renameSync("logs/temp-forks", "logs/forks");
       }, 1000);
     }
+    
+    if (data.programs === undefined) {
+      return;
+    }
 
     try {
       var json = [];
@@ -304,6 +312,10 @@ function run() {
         fs.rmSync("logs/feedbacks", { recursive: true, force: true });
         fs.renameSync("logs/temp-feedbacks", "logs/feedbacks");
       }, 1000);
+    }
+    
+    if (data[0] === undefined) {
+      return;
     }
 
     try {
@@ -350,6 +362,10 @@ function run() {
         fs.rmSync("logs/questions", { recursive: true, force: true });
         fs.renameSync("logs/temp-questions", "logs/questions");
       }, 1000);
+    }
+    
+    if (data[0] === undefined) {
+      return;
     }
 
     try {
