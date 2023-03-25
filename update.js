@@ -83,7 +83,12 @@ function fetchMain(id, callback) {
   })
     .then((response) => response.text())
     .then((body) => {
-      callback(id, JSON.parse(body).data.programById);
+      try {
+        callback(id, JSON.parse(body).data.programById);
+      }
+      catch(er) {
+        callback(id, undefined);
+      }
     });
 }
 function fetchForks(id, callback) {
@@ -95,7 +100,12 @@ function fetchForks(id, callback) {
   })
     .then((response) => response.text())
     .then((body) => {
-      callback(id, JSON.parse(body).data.listTopProgramSpinoffs);
+      try {
+        callback(id, JSON.parse(body).data.listTopProgramSpinoffs);
+      }
+      catch(er) {
+        callback(id, undefined);
+      }
     });
 }
 function fetchFeedbacks(id, callback, _key, _temp, _calls) {
@@ -118,21 +128,26 @@ function fetchFeedbacks(id, callback, _key, _temp, _calls) {
   })
     .then((response) => response.text())
     .then((body) => {
-      if (JSON.parse(body).data.feedback.isComplete || _calls > 10) {
-        if (_temp === undefined) {
-          callback(id, JSON.parse(body).data.feedback.feedback);
+      try {
+        if (JSON.parse(body).data.feedback.isComplete || _calls > 10) {
+          if (_temp === undefined) {
+            callback(id, JSON.parse(body).data.feedback.feedback);
+          }
+          else {
+            callback(id, _temp.concat(JSON.parse(body).data.feedback.feedback));
+          }
         }
         else {
-          callback(id, _temp.concat(JSON.parse(body).data.feedback.feedback));
+          if (_temp === undefined) {
+            fetchFeedbacks(id, callback, JSON.parse(body).data.feedback.cursor, JSON.parse(body).data.feedback.feedback, _calls);
+          }
+          else {
+            fetchFeedbacks(id, callback, JSON.parse(body).data.feedback.cursor, _temp.concat(JSON.parse(body).data.feedback.feedback), _calls);
+          }
         }
       }
-      else {
-        if (_temp === undefined) {
-          fetchFeedbacks(id, callback, JSON.parse(body).data.feedback.cursor, JSON.parse(body).data.feedback.feedback, _calls);
-        }
-        else {
-          fetchFeedbacks(id, callback, JSON.parse(body).data.feedback.cursor, _temp.concat(JSON.parse(body).data.feedback.feedback), _calls);
-        }
+      catch(er) {
+        callback(id, undefined);
       }
     });
 }
@@ -157,21 +172,26 @@ function fetchQuestions(id, callback, _key, _temp, _calls) {
     .then((response) => response.text())
     .then((body) => {
       //callback(id, JSON.parse(body));
-      if (JSON.parse(body).data.feedback.isComplete || _calls > 10) {
-        if (_temp === undefined) {
-          callback(id, JSON.parse(body).data.feedback.feedback);
+      try {
+        if (JSON.parse(body).data.feedback.isComplete || _calls > 10) {
+          if (_temp === undefined) {
+            callback(id, JSON.parse(body).data.feedback.feedback);
+          }
+          else {
+            callback(id, _temp.concat(JSON.parse(body).data.feedback.feedback));
+          }
         }
         else {
-          callback(id, _temp.concat(JSON.parse(body).data.feedback.feedback));
+          if (_temp === undefined) {
+            fetchQuestions(id, callback, JSON.parse(body).data.feedback.cursor, JSON.parse(body).data.feedback.feedback, _calls);
+          }
+          else {
+            fetchQuestions(id, callback, JSON.parse(body).data.feedback.cursor, _temp.concat(JSON.parse(body).data.feedback.feedback), _calls);
+          }
         }
       }
-      else {
-        if (_temp === undefined) {
-          fetchQuestions(id, callback, JSON.parse(body).data.feedback.cursor, JSON.parse(body).data.feedback.feedback, _calls);
-        }
-        else {
-          fetchQuestions(id, callback, JSON.parse(body).data.feedback.cursor, _temp.concat(JSON.parse(body).data.feedback.feedback), _calls);
-        }
+      catch(er) {
+        callback(id, undefined);
       }
     });
 }
