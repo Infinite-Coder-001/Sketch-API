@@ -72,3 +72,8 @@ Otherwise, please report the bug in Issues.
 ## Credits
 **Sprout** - help with Github Action setup <br>
 **Infinite coder** - everything else
+
+---
+
+**Copyright (c) 2023 Infinite coder** <br>
+See LICENSE
